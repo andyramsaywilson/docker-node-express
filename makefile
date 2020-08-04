@@ -11,6 +11,9 @@ up-dockerfile:
 	node-docker-init-5
 up-docker-compose:
 	docker-compose run --rm --service-ports nod_dev_env
+rebuild-docker-compose:
+	docker-compose down && docker-compose up --build --force-recreate --no-deps -d
+
 
 up:
 	docker-compose build && docker-compose up
