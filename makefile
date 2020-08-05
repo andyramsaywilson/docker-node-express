@@ -13,7 +13,10 @@ up-docker-compose:
 	docker-compose run --rm --service-ports nod_dev_env
 rebuild-docker-compose:
 	docker-compose down && docker-compose up --build --force-recreate --no-deps -d
-
+ssh:
+	docker exec -u root -it my-node-env /bin/bash
+logs:
+	docker logs -f my-node-env
 
 up:
 	docker-compose build && docker-compose up
