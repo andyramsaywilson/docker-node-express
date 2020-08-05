@@ -6,5 +6,12 @@ ENV PORT 3000
 
 EXPOSE 3000
 
-# ENTRYPOINT /bin/bash
-ENTRYPOINT [ "yarn", "start" ]
+# COPY package.json .
+# COPY yarn.lock .
+# RUN yarn install 
+
+# RUN echo 'YOLO'
+
+
+# ENTRYPOINT /bin/bash
+ENTRYPOINT [ "yarn", "dev" ]
