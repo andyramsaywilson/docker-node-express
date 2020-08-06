@@ -1,6 +1,7 @@
 const Day07Arrays = require('./day07Arrays.js');
 const Day08DictionariesAndMaps = require('./day08DictionariesAndMaps.js');
 const Day08DictionariesAndMapsFast = require('./day08DictionariesAndMapsFast.js');
+const Day09FactorialRecursion = require('./day09FactorialRecursion.js');
 
 module.exports = class Day00Loader {
   constructor(day) {
@@ -28,6 +29,10 @@ module.exports = class Day00Loader {
 	    		},
 	    	);
 	    	return result.join("\n");
+    	case '09':
+	    	return (new Day09FactorialRecursion()).calculate(5).toString();
+    	case '09-nonRecursive':
+	    	return (new Day09FactorialRecursion()).calculateNonRecursive(5).toString();
     }
     return null;
   }
