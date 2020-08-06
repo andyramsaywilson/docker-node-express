@@ -3,6 +3,7 @@ const Day08DictionariesAndMaps = require('./day08DictionariesAndMaps.js');
 const Day08DictionariesAndMapsFast = require('./day08DictionariesAndMapsFast.js');
 const Day09FactorialRecursion = require('./day09FactorialRecursion.js');
 const Day10BinaryNumbers = require('./day10BinaryNumbers.js');
+const Day11ArrayHourglassSum = require('./day11ArrayHourglassSum.js');
 
 module.exports = class Day00Loader {
   constructor(day) {
@@ -36,6 +37,15 @@ module.exports = class Day00Loader {
 	    	return (new Day09FactorialRecursion()).calculateNonRecursive(5).toString();
     	case '10':
 	    	return (new Day10BinaryNumbers()).calculate(10123).toString();
+	    case '11':
+	    	return (new Day11ArrayHourglassSum()).calculate([
+						[1,1,1,0,0,0],
+						[0,1,0,0,0,0],
+						[1,1,1,0,0,0],
+						[0,0,0,0,0,0],
+						[0,0,0,0,0,0],
+						[0,0,0,0,0,0]	    		
+	    	]).toString();
     }
     return null;
   }
