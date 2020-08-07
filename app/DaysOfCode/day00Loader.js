@@ -6,6 +6,7 @@ const Day10BinaryNumbers = require('./day10BinaryNumbers.js');
 const Day11ArrayHourglassSum = require('./day11ArrayHourglassSum.js');
 const Day15LinkedLists = require('./Day15LinkedLists.js');
 const Day16Exceptions = require('./Day16Exceptions.js');
+const Day17MoreExceptions = require('./Day17MoreExceptions.js');
 
 module.exports = class Day00Loader {
   constructor(day) {
@@ -53,6 +54,8 @@ module.exports = class Day00Loader {
 	    	return day15Solution.addThenDisplay();
 	    case '16':
 	    	return (new Day16Exceptions()).convertArray(['1', 'abcd', '1asdf65', '123def']).toString();
+	    case '17':
+	    	return (new Day17MoreExceptions()).allPowers([[1, 1], [-1, 1], [1, -1], [-1, -1], ['a', 1], [1, 'a']]).toString();
     }
     return null;
   }
