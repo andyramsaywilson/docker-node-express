@@ -5,6 +5,7 @@ const Day09FactorialRecursion = require('./day09FactorialRecursion.js');
 const Day10BinaryNumbers = require('./day10BinaryNumbers.js');
 const Day11ArrayHourglassSum = require('./day11ArrayHourglassSum.js');
 const Day15LinkedLists = require('./Day15LinkedLists.js');
+const Day16Exceptions = require('./Day16Exceptions.js');
 
 module.exports = class Day00Loader {
   constructor(day) {
@@ -50,7 +51,8 @@ module.exports = class Day00Loader {
 	    case '15':
 	    	let day15Solution = new Day15LinkedLists([2,4,3,1]);
 	    	return day15Solution.addThenDisplay();
-	    	
+	    case '16':
+	    	return (new Day16Exceptions()).convertArray(['1', 'abcd', '1asdf65', '123def']).toString();
     }
     return null;
   }
